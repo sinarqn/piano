@@ -1,0 +1,51 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  width: 100%;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.piano{
+  display: flex;
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+  cursor: pointer;
+  height: 50%;
+}
+
+.white{
+  height: 100%;
+  flex-grow: 1;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+.white.active{
+  background-color: #aaa;
+}
+.black{
+  width: var(--width);
+  --width: 8%;
+  height: 60%;
+  background-color: #000;
+  margin-left: calc(var(--width) / -2);
+  margin-right: calc(var(--width) / -2);
+  z-index: 2;
+}
+.black.active{
+  background-color: #222;
+}
+
+@media screen and (max-width: 768px) {
+  .piano{
+
+  }
+}
